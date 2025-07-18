@@ -60,7 +60,7 @@ jdk.overrideAttrs (oldAttrs: rec {
     hash = "sha256-sGAMrE9gAt73jgLlNW8p5Lz37gFiK4ZvMQ8giE2Ia54=";
   };
 
-  env = (oldAttrs.env or {}) // {
+  env = (oldAttrs.env or { }) // {
     BOOT_JDK = jdk.home;
     # run `git log -1 --pretty=%ct` in jdk repo for new value on update
     SOURCE_DATE_EPOCH = 1745907200;
